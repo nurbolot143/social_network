@@ -89,6 +89,14 @@ body {
   padding: 0 15px;
 }
 
+.main {
+  margin: 60px 0 0 0;
+
+  @include media(642) {
+    margin: 50px 0 0 0;
+  }
+}
+
 // .App {
 //   min-height: 100vh;
 //   display: flex;

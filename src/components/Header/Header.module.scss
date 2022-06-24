@@ -1,5 +1,5 @@
-@import "../media";
-@import "../vars";
+@import "../../scss/media";
+@import "../../scss/vars";
 
 .header {
   position: relative;
@@ -20,22 +20,22 @@
     background-color: $light;
     z-index: 3;
   }
+}
 
-  &__wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  &__logo {
-    padding: 10px 0;
-    font-family: $logo-font;
-    font-size: 30px;
-    color: $dark-gray;
-    z-index: 9;
+.logo {
+  padding: 10px 0;
+  font-family: $logo-font;
+  font-size: 30px;
+  color: $dark-gray;
+  z-index: 9;
 
-    img {
-      width: 100%;
-    }
+  img {
+    width: 100%;
   }
 }
