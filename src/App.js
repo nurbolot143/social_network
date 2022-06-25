@@ -13,7 +13,7 @@ function App() {
           <main className="main">
             <Routes>
               <Route path="/" element={<div> Home</div>} />
-              <Route path="/dialogs" element={<Dialogs />} />
+              <Route path="/dialogs/*" element={<Dialogs />} />
               <Route path="/music" element={<div> Music</div>} />
               <Route path="/settings" element={<div> Setting</div>} />
               <Route path="/profile" element={<Profile />} />

@@ -30,7 +30,6 @@ aside {
 }
 html,
 body {
-  height: 100%;
   width: 100%;
   font-size: 100%;
   line-height: 1;
@@ -80,19 +79,34 @@ h6 {
 
 body {
   font-family: $main-font;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+    background: $gray;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba($color: $dark-gray, $alpha: 0.6);
+  }
 }
 
 .container {
   max-width: 1240px;
   margin: 0 auto;
   padding: 0 15px;
+
+  &_large {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
 }
 
 .main {
   margin: 60px 0 0 0;
 
   @include media(642) {
-    margin: 50px 0 0 0;
+    margin: 50px 0;
   }
 }
 
