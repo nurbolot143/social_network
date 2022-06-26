@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Header from "./components/Header/Header";
-import Dialogs from "./pages/Dialogs/Dialogs";
-import Profile from "./pages/Profile/Profile";
+import Dialogs from "./components/Dialogs/Dialogs";
+import Profile from "./components/Profile/Profile";
 
-function App() {
+function App({ state }) {
   return (
     <Router>
       <div className="App">
@@ -13,10 +13,16 @@ function App() {
           <main className="main">
             <Routes>
               <Route path="/" element={<div> Home</div>} />
-              <Route path="/dialogs/*" element={<Dialogs />} />
+              <Route
+                path="/dialogs/*"
+                element={<Dialogs data={state.dialogsPage} />}
+              />
               <Route path="/music" element={<div> Music</div>} />
               <Route path="/settings" element={<div> Setting</div>} />
-              <Route path="/profile" element={<Profile />} />
+              <Route
+                path="/profile"
+                element={<Profile data={state.profilePage} />}
+              />
             </Routes>
           </main>
         </div>

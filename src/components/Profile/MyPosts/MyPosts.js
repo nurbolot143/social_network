@@ -3,20 +3,20 @@ import Post from "../Post/Post";
 
 import s from "./MyPosts.module.scss";
 
-const MyPosts = () => {
+const MyPosts = ({ posts }) => {
   return (
     <div>
       <h2 className={s.title}>My posts</h2>
 
       <form className={s.form}>
-        <input type="text" placeholder="Your news..." />
+        <textarea rows="5" placeholder="Your news..."></textarea>
         <button type="submit">send</button>
       </form>
 
       <ul className={s.list}>
-        <Post message={"Hey, How are you?"} />
-        <Post message={"Hey, What's app?"} />
-        <Post message={"Hey, What are you doing?"} />
+        {posts.map(({ id, avatar, message }) => {
+          return <Post key={id} avatar={avatar} message={message} />;
+        })}
       </ul>
     </div>
   );

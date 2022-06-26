@@ -1,10 +1,10 @@
 import React from "react";
-import MyPosts from "../../components/MyPosts/MyPosts";
-import User from "../../components/User/User";
+import MyPosts from "./MyPosts/MyPosts";
+import User from "./User/User";
 
 import s from "./Profile.module.scss";
 
-const Profile = () => {
+const Profile = ({ data }) => {
   return (
     <>
       <div className={s.banner}>
@@ -16,7 +16,7 @@ const Profile = () => {
 
       <div className="container">
         <User />
-        <MyPosts />
+        <MyPosts posts={data.posts} />
       </div>
     </>
   );
