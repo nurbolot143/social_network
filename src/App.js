@@ -4,7 +4,7 @@ import Header from "./components/Header/Header";
 import Dialogs from "./components/Dialogs/Dialogs";
 import Profile from "./components/Profile/Profile";
 
-function App({ state }) {
+function App() {
   return (
     <Router>
       <div className="App">
@@ -13,16 +13,10 @@ function App({ state }) {
           <main className="main">
             <Routes>
               <Route path="/" element={<div> Home</div>} />
-              <Route
-                path="/dialogs/*"
-                element={<Dialogs data={state.dialogsPage} />}
-              />
+              <Route path="/dialogs/*" element={<Dialogs />} />
               <Route path="/music" element={<div> Music</div>} />
               <Route path="/settings" element={<div> Setting</div>} />
-              <Route
-                path="/profile"
-                element={<Profile data={state.profilePage} />}
-              />
+              <Route path="/profile" element={<Profile />} />
             </Routes>
           </main>
         </div>

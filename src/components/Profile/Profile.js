@@ -4,7 +4,7 @@ import User from "./User/User";
 
 import s from "./Profile.module.scss";
 
-const Profile = ({ data }) => {
+const Profile = () => {
   return (
     <>
       <div className={s.banner}>
@@ -16,7 +16,7 @@ const Profile = ({ data }) => {
 
       <div className="container">
         <User />
-        <MyPosts posts={data.posts} />
+        <MyPosts />
       </div>
     </>
   );
